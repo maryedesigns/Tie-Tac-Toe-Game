@@ -1,0 +1,259 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to bottom right, #0056b8a2, #f3a71e);
+}
+
+#board {
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px 100px;
+  cursor: pointer;
+  position: relative;
+  margin: 50px;
+  box-shadow: black 20px 10px 50px;
+  background-color: white;
+
+}
+
+h1 {
+  margin-top: 3%;
+}
+
+/* Center the records section in the middle of the page */
+#records {
+  display: grid;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  width: 400px;
+  height: 400px;
+  margin: auto;
+  box-shadow: black 20px 10px 50px;
+  text-align: center;
+}
+
+#human{
+  padding: 5px;
+  font-size: 1rem;
+  margin-left: 10px;
+}
+
+.controls {
+  margin-bottom: 20px;
+}
+
+.inactive {
+  /* Makes the board appear grayed out */
+  opacity: 0.5;
+  /* Changes the cursor to indicate it's inactive */
+  cursor: not-allowed;
+}
+
+#timer-display {
+  display: none;
+  font-size: 24px;
+}
+
+#time {
+  display: none;
+  font-size: 24px;
+  margin-right: 5px;
+}
+
+#timer-container {
+  display: flex;
+  align-items: center;
+}
+
+.controls label {
+  font-size: 22px;
+  font-weight: bold;
+  color: rgb(0, 128, 0);
+}
+
+#aiLevel {
+  padding: 5px;
+  font-size: 1rem;
+  margin-left: 10px;
+}
+
+
+#board-container {
+  background-color: rgba(128, 128, 128, 0.555);
+  cursor: pointer;
+  position: relative;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border: 60px;
+  display: none;
+}
+
+.tile {
+  color: black;
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-border {
+  border-right: 0.1em dashed black;
+}
+
+.bottom-border {
+  border-bottom: 0.1em solid black;
+}
+
+.left-border {
+  border-left: 0.1em dashed black;
+}
+
+.top-border {
+  border-top: 0.1em solid black;
+}
+
+.winner-square {
+  background-color: rgba(0, 128, 0, 0.5);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto repeat(2, 1fr);
+  gap: 10px;
+  width: 250px;
+  margin: 20px auto;
+  padding: 5px;
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+}
+
+#scoreBoard {
+  display: none;
+}
+
+#resetButton {
+  display: none;
+}
+
+.grid-container div {
+  padding: 8px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#game-over-area {
+  text-align: center;
+  border: rgb(128, 128, 128) dotted;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 50px;
+  width: 50%;
+  margin-top: 50px;
+  background-color: rgba(255, 255, 255, 0.541);
+  box-shadow: black 20px 10px 50px;
+}
+
+h2 {
+  color: green;
+  font-size: 2em;
+  margin-top: 0px;
+}
+
+button {
+  background-color: transparent;
+  color: black;
+  border: black 1px solid;
+  border-radius: 30px;
+  padding: 10px;
+  font-size: 1.5em;
+}
+
+button:hover {
+  color: white;
+  background-color: green;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.x-hover:hover::after {
+  content: "X";
+  opacity: 0.4;
+}
+
+.x-text {
+  background-color: #f3a71e;
+}
+
+.o-text {
+  background-color: #f3a71e;
+}
+
+.o-hover:hover::after {
+  content: "O";
+  opacity: 0.4;
+}
+
+.game--restart {
+  margin-top: 20px;
+  display: none;
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.start {
+  margin-top: 20px;
+  display: none;
+}
+
+#resetButton {
+  font-size: medium;
+  margin-bottom: 10px;
+}
+
+#letPlay {
+  font-size: medium;
+  margin-left: 4.5em;
+  margin-right: 4.5em;
+  margin-bottom: 10px;
+}
+
+#confirmationModal{
+  display:none; 
+  position: fixed; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  background-color: rgba(255, 255, 255, 0.938);
+  color:red;
+  padding: 20px; 
+  border: 1px solid black; 
+  z-index: 1000;
+}
+
+#overlay{
+  display:none;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  background: rgba(0, 0, 0, 0.5); z-index: 999;
+}

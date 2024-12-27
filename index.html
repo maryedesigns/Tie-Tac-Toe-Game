@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nought and Crosses</title>
+  <link href="index.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="timer-container">
+    <p id="time">Time:</p>
+    <div id="timer-display">15</div>
+  </div>
+  <h1>Tic Tac Toe Game!</h1>
+  <div id="records">
+    <div class="controls">
+      <label for="aiLevel">Play With Computer:</label>
+      <select id="aiLevel">
+        <option value="ai">Select AI Level</option>
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+      </select><br><br><br><br><br><br>
+      <label for="human">Two Players Game:</label>
+      <select id="human">
+        <option value="player">Select Player</option>
+        <option value="x">X Player</option>
+        <option value="o">O Player</option>
+      </select>
+    </div>
+    <button id="letPlay">Let's Play</button>
+  </div>
+  <div id="questionContainer"></div>
+  <div id="scoreBoard" class="grid-container">
+    <div></div>
+    <div>Wins</div>
+    <div>Draws</div>
+
+    <div>Player X</div>
+    <div id="x-wins">0</div>
+    <div id="x-draws">0</div>
+
+    <div>Player O</div>
+    <div id="o-wins">0</div>
+    <div id="o-draws">0</div>
+  </div>
+
+  <button id="resetButton">Reset Score</button>
+
+  <div id="board-container">
+    <div id="board">
+      <div data-index="1" class="tile right-border bottom-border left-border top-border"></div>
+      <div data-index="2" class="tile right-border bottom-border top-border"></div>
+      <div data-index="3" class="tile right-border bottom-border top-border"></div>
+      <div data-index="4" class="tile bottom-border right-border top-border"></div>
+      <div data-index="5" class="tile right-border bottom-border left-border"></div>
+      <div data-index="6" class="tile right-border bottom-border"></div>
+      <div data-index="7" class="tile right-border bottom-border"></div>
+      <div data-index="8" class="tile bottom-border right-border"></div>
+      <div data-index="9" class="tile right-border bottom-border left-border"></div>
+      <div data-index="10" class="tile right-border bottom-border"></div>
+      <div data-index="11" class="tile right-border bottom-border"></div>
+      <div data-index="12" class="tile bottom-border right-border"></div>
+      <div data-index="13" class="tile right-border bottom-border left-border"></div>
+      <div data-index="14" class="tile right-border bottom-border"></div>
+      <div data-index="15" class="tile right-border bottom-border"></div>
+      <div data-index="16" class="tile right-border bottom-border"></div>
+      <div id="strike" class="strike"></div>
+    </div>
+  </div>
+
+  <div id="game-over-area" class="hidden">
+    <h2 id="game-over-text"></h2>
+    <button id="play-again">Play Again</button>
+  </div>
+
+  <div id="confirmationModal">
+    <p>Are you sure you want to restart the game?</p>
+    <button id="yesButton">Yes</button>
+    <button id="noButton">No</button>
+  </div>
+  <div id="overlay"></div>
+  
+  <div class="button-container">
+    <button class="game--restart">Restart Game</button>
+    <button id="home" class="start">Back to Home</button>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
